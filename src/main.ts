@@ -15,7 +15,7 @@ function doGet(e) {
   let time = String(data_block.match(/<span class="u-dib">.*/g)).replace(html_tag, '').split(',');
   let genre = String(data_block.match(/<p class="cat u-bgColor-.*">.*/g)).replace(html_tag, '').split(',');
   let title = String(data_block.match(/<p class="tit">.*/g)).replace(html_tag, '').split(',');
-  let staff = String(data_block.match(/<p class="staff">.*/g)).replace(html_tag, '').replace(/担当教員：/g '').split(',');
+  let staff = String(data_block.match(/<p class="staff">.*/g)).replace(html_tag, '').replace(/担当教員：/g, '').split(',');
 
   //JSONデータを生成
   let canceled_class = new Array();
